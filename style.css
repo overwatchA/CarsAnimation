@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: 'Poppins', sans-serif;
+  }
+
+.container{
+    display: flex;
+    margin: auto;
+    height: 100vh;
+    background-image: url(./img/fondo.png);
+    background: cover;
+    animation:  10s linear infinite;
+} /*fondo-move*/
+
+.carro-completo{
+    margin: auto;
+    margin-top: 40rem;
+
+}
+
+.carro{
+    position: relative;
+    animation:   .2s ease-in infinite alternate;
+} /*carro-jump*/
+
+.rueda1{
+    position: absolute;
+    bottom: -1.5rem;
+    left: 1.6rem;
+    animation:  1s linear infinite ;
+} /*rueda-jump*/
+
+.rueda2{
+    position: absolute;
+    bottom: -1.5rem;
+    right: 3.9rem;
+    animation:  1s linear infinite;
+}  /*rueda-jump*/
+
+.cajaPolvo{
+    position: absolute;
+    width: 186px;
+    height: 123px;
+    background-image: url(./img/polvo.png);
+    background-repeat: no-repeat;
+    bottom: -1.3rem;
+    left: -9rem;
+    animation:  .6s steps(6) infinite;
+    z-index: -1;
+}   /*polvo*/
+
+
+@keyframes carro-jump {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(.2rem);
+    }
+}
+
+@keyframes rueda-jump {
+    0%{
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes fondo-move {
+    0%{
+        background-position-x: 1px;
+    }
+
+    100%{
+        background-position-x: -3704px ;
+    }
+}
+
+@keyframes polvo{
+    0%{
+        background-position-x: 0px; 
+    }
+
+    100%{
+        background-position-x: -1117px ;
+    }
+}
+
+
